@@ -8,10 +8,13 @@ body {
 }
 
 app-header {
-  display: block;
-  background: #c62828;
-  color: white;
+  display: flex;
+  background: #ffd8d8;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem;
+  position: sticky;
+  top: 0;
 }
 
 .spacer {

@@ -1,5 +1,11 @@
-<mat-toolbar color="primary">
-    <span>Satriale's Pork Store</span>
-    <span class="spacer"></span>
-    <a mat-button routerLink="/">Home</a>
-  </mat-toolbar>
+<a routerLink="/"><img src="../../../assets/images/logotip.png" alt="SATRIALE'S" height="100px"></a>
+<div class="nav-buttons">
+  <button mat-raised-button color="color" (click)="scrollTo('meat')">MEAT</button>
+  <button mat-raised-button color="color" (click)="scrollTo('meals')">MEALS</button>
+  <button mat-raised-button color="color" (click)="scrollTo('drinks')">DRINKS</button>
+</div>
+
+<div class="nav-buttons">
+  <button mat-raised-button color="color">MERCH</button>
+  <button mat-raised-button color="color">ABOUT</button>
+</div>

@@ -1,0 +1,11 @@
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.mat-color {
+    background-color: #d49192;
+    color: white;
+}

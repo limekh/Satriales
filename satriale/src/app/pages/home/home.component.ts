@@ -13,13 +13,5 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class HomeComponent {
   
-  constructor() {
-    console.log('HomeComponent loaded'); // Должен появиться в консоли браузера
-  }
-
-  scrollTo(sectionId: string): void {
-    document.getElementById(sectionId)?.scrollIntoView({ 
-      behavior: 'smooth' 
-    });
-  }
+  constructor() { }
 }
