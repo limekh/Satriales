@@ -1,0 +1,50 @@
+.hero-banner {
+    /* background-image: url('../../../assets/images/meat-banner.jpg'); */
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: #f5f5f5;
+  }
+  
+  section {
+    padding: 40px 20px;
+    min-height: 400px;
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #c62828;
+    }
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: #333;
+    color: white;
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      
+      a {
+        color: white;
+      }
+    }
+  }
