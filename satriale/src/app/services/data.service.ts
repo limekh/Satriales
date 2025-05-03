@@ -55,15 +55,65 @@ export class DataService {
             composition: "Hamburger, meat, bread",
             weight: 200,
             allergens: "glutens"
+        },
+        {
+            id: 2002,
+            name: "Porchetta",
+            category: "Meal",
+            price: 6,
+            imageUrl: "../../../assets/images/porchetta.jpg",
+            isStock: true,
+            nutritionValue: [205, 16, 16, 0],
+            composition: "Pork, rosemary, garlic, pepper",
+            weight: 200,
+            allergens: "No"
+        },
+        {
+            id: 2003,
+            name: "Panozzo",
+            category: "Meal",
+            price: 4.1,
+            imageUrl: "../../../assets/images/panozzo.webp",
+            isStock: true,
+            nutritionValue: [205, 16, 16, 0],
+            composition: "Parma ham, arugula, mozzarella, cherry tomatoes",
+            weight: 200,
+            allergens: "glutens"
         }
     ];
     private drinks: Drink[] = [
         {
             id: 3001,
-            name: "Cola",
+            name: "Cola 0.5l",
             category: "Drink",
             price: 1.5,
             imageUrl: "../../../assets/images/cola.jpg",
+            isStock: true,
+            nutritionValue: [205, 0, 0, 50],
+            composition: "Sugar",
+            type: "limonade",
+            volume: 500,
+            isCarbonated: true
+        },
+        {
+            id: 3002,
+            name: "Sprite 0.5l",
+            category: "Drink",
+            price: 1.5,
+            imageUrl: "../../../assets/images/sprite.jpg",
+            isStock: true,
+            nutritionValue: [205, 0, 0, 50],
+            composition: "Sugar",
+            type: "limonade",
+            volume: 500,
+            isCarbonated: true
+        },
+        {
+            id: 3003,
+            name: "Fanta 0.5l",
+            category: "Drink",
+            price: 1.5,
+            imageUrl: "../../../assets/images/fanta.jpg",
             isStock: true,
             nutritionValue: [205, 0, 0, 50],
             composition: "Sugar",
