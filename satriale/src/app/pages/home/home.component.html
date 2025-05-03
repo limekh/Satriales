@@ -11,17 +11,35 @@
   
   <section id="meat">
     <h2>MEAT</h2>
-    <!-- Meat products content -->
+    <div class="products-grid">
+      <div *ngFor="let product of meatProducts" class="product-card">
+        <img [src]="product.imageUrl" [alt]="product.name">
+        <h3>{{product.name}}</h3>
+        <p>{{product.price | currency}}</p> 
+      </div>
+    </div>
   </section>
   
   <section id="meals">
     <h2>MEALS</h2>
-    <!-- Ready meals content -->
+    <div class="products-grid">
+      <div *ngFor="let product of mealProducts" class="product-card">
+        <img [src]="product.imageUrl" [alt]="product.name">
+        <h3>{{product.name}}</h3>
+        <p>{{product.price | currency}}</p> 
+      </div>
+    </div>
   </section>
   
   <section id="drinks">
     <h2>DRINKS</h2>
-    <!-- Drinks content -->
+    <div class="products-grid">
+      <div *ngFor="let product of drinkProducts" class="product-card">
+        <img [src]="product.imageUrl" [alt]="product.name">
+        <h3>{{product.name}}</h3>
+        <p>{{product.price | currency}}</p> 
+      </div>
+    </div>
   </section>
   
   <footer>
@@ -30,7 +48,7 @@
       <p>Address: 123 Pork Street, Newark, NJ</p>
     </div>
     <div class="social-links">
-      <a href="#"><mat-icon>telegram</mat-icon></a>
-      <a href="#"><mat-icon>facebook</mat-icon></a>
+      <a href="#"><mat-icon>TG</mat-icon></a>
+      <a href="#"><mat-icon>X</mat-icon></a>
     </div>
   </footer>
