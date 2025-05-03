@@ -16,6 +16,15 @@ app-header {
   position: sticky;
   top: 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 0px 0px 10px 10px ;
+}
+
+app-footer {
+  display: flex;
+  background: #ffd8d8;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px 10px 10px 10px ;
 }
 
 .products-grid {
