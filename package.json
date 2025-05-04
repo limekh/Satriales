@@ -3,5 +3,8 @@
     "@angular/animations": "^19.2.9",
     "@angular/cdk": "^19.2.11",
     "@angular/material": "^19.2.11"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^5.1.7"
   }
 }
