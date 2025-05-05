@@ -1,0 +1,35 @@
+<div class="product-detail-container" *ngIf="product">
+    <mat-card class="product-card">
+      <button mat-raised-button color="primary" routerLink="/">Back to Products</button>
+      <img mat-card-image [src]="product.imageUrl" [alt]="product.name">
+      
+      <mat-card-header>
+        <mat-card-title>{{ product.name }}</mat-card-title>
+        <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <p class="price">{{ product.price | currency }}</p>
+        <p *ngIf="product.description">{{ product.description }}</p>
+        
+        <!-- Специфичные поля для разных типов продуктов -->
+        <div *ngIf="isMeat(product)">
+          <p><strong>Type:</strong> {{ product.meatSort }}</p>
+          <p><strong>Cut:</strong> {{ product.cutType }}</p>
+          <p><strong>Grade:</strong> {{ product.grade }}</p>
+        </div>
+        
+        <div *ngIf="isMeal(product)">
+          <p><strong>Weight:</strong> {{ product.weight }}g</p>
+          <p><strong>Allergens:</strong> {{ product.allergens }}</p>
+        </div>
+        
+        <div *ngIf="isDrink(product)">
+          <p><strong>Volume:</strong> {{ product.volume }}ml</p>
+          <p *ngIf="product.alcoholPercentage">
+            <strong>Alcohol:</strong> {{ product.alcoholPercentage }}%
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
