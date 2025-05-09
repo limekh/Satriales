@@ -6,6 +6,33 @@
 }
 
 .mat-color {
-    background-color: #d49192;
-    color: white;
+    background-color: #e9a0a18e;
+    height: 65px;
 }
+
+.pig-wrapper {
+    width: 130px;
+    position: relative;
+    padding: 0;
+    border: none;
+  }
+
+.pig-wrapper:active {
+    background-color: #966d6efa;
+}
+
+.pig-button {
+    width: 100px;
+}
+
+.pig-text {
+    position: absolute;
+    top: 44%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+
+    font-size:small;
+    color: white;
+    font-weight: bold;
+    pointer-events: none; 
+  }
