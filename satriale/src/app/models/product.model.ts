@@ -4,7 +4,6 @@ export interface Product {
     category: string;
     price: number;
     imageUrl?: string;
-    description?: string;
     isStock: boolean;
     nutritionValue: number[];
 }
@@ -13,6 +12,7 @@ export interface Meat extends Product {
     meatSort: string;
     cutType: string;
     grade: string; 
+    onBone: boolean;
 }
 
 export interface Meal extends Product {
@@ -28,3 +28,5 @@ export interface Drink extends Product {
     alcoholPercentage?: number;
     isCarbonated: boolean;
 }
+
+export type AnyProduct = Meat | Meal | Drink;

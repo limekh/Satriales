@@ -1,0 +1,44 @@
+<div class="product-modal-content">
+    <h1>{{ product.name }}</h1>
+    <img [src]="product.imageUrl" alt="{{ product.name }}">
+    <h2>Is stock: {{ product.isStock ? 'Yes' : 'No'}}</h2>
+    <p *ngIf="isMeat(product)" class="price">{{product.price | currency}} / kg</p>
+    <p *ngIf="isMeal(product)" class="price">{{product.price | currency}} / piece</p>
+    <p *ngIf="isDrink(product)" class="price">{{product.price | currency}} / bottle</p>
+    <div *ngIf="isMeat(product)">
+        <ul>
+            <li>Nutrition Value(Calories/Protein/Fat/Carbohydrates): {{ product.nutritionValue.join('/') }}</li>
+            <li>Meat Sort: {{product.meatSort}} </li>
+            <li>Cut Type: {{product.cutType}}</li>
+            <li>On the Bone: {{product.onBone ? 'Yes' : 'No'}}</li>
+            <li>Freeze grade: {{ product.grade}} </li>
+        </ul>
+    </div>
+    <div *ngIf="isMeal(product)">
+        <h2>Composition: </h2>
+        <p>{{ product.composition }}</p>
+        <h2>Specifications </h2>
+        <ul>
+            <li>Nutrition Value(Calories/Protein/Fat/Carbohydrates): {{ product.nutritionValue.join('/') }}</li>
+            <li>Weight: {{ product.weight }}g</li>
+            <li>Allergens: {{ product.allergens }}</li>
+        </ul>
+    </div>
+    <div *ngIf="isDrink(product)">
+        <div class="info-block">
+            <h2>Composition </h2>
+            <p>{{ product.composition }}</p>
+        </div>
+        <div class="info-block">
+            <h2>Specifications </h2>
+            <ul>
+                <li>Nutrition Value(Calories/Protein/Fat/Carbohydrates): {{ product.nutritionValue.join('/') }}</li>
+                <li>Volume: {{ product.volume }}ml</li>
+                <li>Type: {{ product.type }}</li>
+                <li *ngIf="product.alcoholPercentage">Alcohol: {{ product.alcoholPercentage }}</li>
+                <li>Is Carbonated: {{ product.isCarbonated ? 'Yes' : 'No' }}</li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="order">To order, call: (666) 228-1337</h2>
+</div>

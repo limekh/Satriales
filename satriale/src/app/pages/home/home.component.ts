@@ -4,13 +4,22 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { Meat, Meal, Drink } from '../../models/product.model';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Meat, Meal, Drink, AnyProduct } from '../../models/product.model';
 import { DataService } from '../../services/data.service';
+import { ProductModalComponent } from '../../components/product-modal/product-modal.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatCardModule, MatIconModule, RouterModule],
+  imports: [
+    CommonModule, 
+    MatButtonModule, 
+    MatCardModule, 
+    MatIconModule, 
+    RouterModule,
+    MatDialogModule
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -19,11 +28,34 @@ export class HomeComponent {
   mealProducts: Meal[] = [];
   drinkProducts: Drink[] = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private dataService: DataService,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.meatProducts = this.dataService.getMeat();
     this.mealProducts = this.dataService.getMeals();
     this.drinkProducts = this.dataService.getDrinks();
+  }
+
+  openProductModal(productId: number): void {
+    const product = this.getProductById(productId);
+    
+    if (product) {
+      this.dialog.open(ProductModalComponent, {
+        width: '500px',
+        data: product
+      });
+    }
+  }
+
+  private getProductById(id: number): AnyProduct | undefined {
+    const allProducts: AnyProduct[] = [
+      ...this.meatProducts,
+      ...this.mealProducts,
+      ...this.drinkProducts
+    ];
+    return allProducts.find(p => p.id === id);
   }
 }

@@ -4,7 +4,7 @@ body {
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 app-header {
@@ -40,7 +40,7 @@ app-footer {
 
 .product-card {
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+  background-color: rgb(248, 226, 226);
   text-align: center;
   overflow: hidden;
   width: 400px;
@@ -62,3 +62,5 @@ app-footer {
   object-fit: cover;
   display:block;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

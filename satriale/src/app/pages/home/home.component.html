@@ -12,7 +12,7 @@
   <section id="meat">
     <h2>MEAT</h2>
     <div class="products-grid">
-      <div *ngFor="let product of meatProducts" class="product-card" [routerLink]="['/product', product.id]">
+      <div *ngFor="let product of meatProducts" (click)="openProductModal(product.id)" class="product-card">
         <img [src]="product.imageUrl" [alt]="product.name">
         <h3>{{product.name}}</h3>
         <p>{{product.price | currency}}</p> 
@@ -23,7 +23,7 @@
   <section id="meals">
     <h2>MEALS</h2>
     <div class="products-grid">
-      <div *ngFor="let product of mealProducts" class="product-card" [routerLink]="['/product', product.id]">
+      <div *ngFor="let product of mealProducts" (click)="openProductModal(product.id)" class="product-card">
         <img [src]="product.imageUrl" [alt]="product.name">
         <h3>{{product.name}}</h3>
         <p>{{product.price | currency}}</p> 
@@ -34,7 +34,7 @@
   <section id="drinks">
     <h2>DRINKS</h2>
     <div class="products-grid">
-      <div *ngFor="let product of drinkProducts" class="product-card" [routerLink]="['/product', product.id]">
+      <div *ngFor="let product of drinkProducts" (click)="openProductModal(product.id)" class="product-card">
         <img [src]="product.imageUrl" [alt]="product.name">
         <h3>{{product.name}}</h3>
         <p>{{product.price | currency}}</p> 

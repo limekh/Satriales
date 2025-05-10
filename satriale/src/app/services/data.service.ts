@@ -16,8 +16,9 @@ export class DataService {
             nutritionValue: [205, 16, 16, 0],
             meatSort: "Pork",
             cutType: "Steak",
-            grade: "Chilled"
-        }, 
+            grade: "Chilled",
+            onBone: false
+        },
         {
             id: 1002,
             name: "Rib Eye Steak",
@@ -28,7 +29,8 @@ export class DataService {
             nutritionValue: [205, 16, 16, 0],
             meatSort: "Beef",
             cutType: "Steak",
-            grade: "Chilled"
+            grade: "Chilled",
+            onBone: false
         },
         {
             id: 1003,
@@ -40,7 +42,8 @@ export class DataService {
             nutritionValue: [205, 16, 16, 0],
             meatSort: "Beef",
             cutType: "Steak",
-            grade: "Chilled"
+            grade: "Chilled",
+            onBone: false
         }
     ];
     private meals: Meal[] = [
@@ -91,7 +94,7 @@ export class DataService {
             isStock: true,
             nutritionValue: [205, 0, 0, 50],
             composition: "Sugar",
-            type: "limonade",
+            type: "Lemonade",
             volume: 500,
             isCarbonated: true
         },
@@ -104,7 +107,7 @@ export class DataService {
             isStock: true,
             nutritionValue: [205, 0, 0, 50],
             composition: "Sugar",
-            type: "limonade",
+            type: "Lemonade",
             volume: 500,
             isCarbonated: true
         },
@@ -117,47 +120,51 @@ export class DataService {
             isStock: true,
             nutritionValue: [205, 0, 0, 50],
             composition: "Sugar",
-            type: "limonade",
+            type: "Lemonade",
             volume: 500,
             isCarbonated: true
         }
     ];
 
-    constructor(){ }
+    constructor() { }
 
     getPopularProducts() {
         return [
-            {   
+            {
                 id: 1001,
-                name: "Rib Eye Steak",
+                name: "Pork Steak",
                 category: "Meat",
                 price: 25,
+                imageUrl: "../../../assets/images/pog_steak.webp",
                 isStock: true,
                 nutritionValue: [205, 16, 16, 0],
-                meatSort: "Beef",
+                meatSort: "Pork",
                 cutType: "Steak",
-                grade: "Chilled" 
+                grade: "Chilled",
+                onBone: false
             },
             {
-                id: 2001,
-                name: "Gabagool",
+                id: 2003,
+                name: "Panozzo",
                 category: "Meal",
-                price: 5,
+                price: 4.1,
+                imageUrl: "../../../assets/images/panozzo.webp",
                 isStock: true,
                 nutritionValue: [205, 16, 16, 0],
-                composition: "Hamburger, meat, bread",
+                composition: "Parma ham, arugula, mozzarella, cherry tomatoes",
                 weight: 200,
                 allergens: "glutens"
             },
             {
-                id: 3001,
-                name: "Cola",
+                id: 3002,
+                name: "Sprite 0.5l",
                 category: "Drink",
-                price: 3,
+                price: 1.5,
+                imageUrl: "../../../assets/images/sprite.jpg",
                 isStock: true,
                 nutritionValue: [205, 0, 0, 50],
                 composition: "Sugar",
-                type: "limonade",
+                type: "Lemonade",
                 volume: 500,
                 isCarbonated: true
             }
@@ -176,7 +183,7 @@ export class DataService {
         return this.drinks;
     }
 
-    getProductById(id: number) : Meat | Meal | Drink | undefined {
+    getProductById(id: number): Meat | Meal | Drink | undefined {
         const allProducts = [...this.meats, ...this.meals, ...this.drinks];
         return allProducts.find(product => product.id == id);
     }
