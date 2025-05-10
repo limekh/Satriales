@@ -15,7 +15,7 @@
     position: relative;
     padding: 0;
     border: none;
-  }
+}
 
 .pig-wrapper:active {
     background-color: #966d6efa;
@@ -31,8 +31,29 @@
     left: 46%;
     transform: translate(-50%, -50%);
 
-    font-size:small;
+    font-size: small;
     color: white;
     font-weight: bold;
-    pointer-events: none; 
-  }
+    pointer-events: none;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+button:focus {
+    outline: none;
+}
