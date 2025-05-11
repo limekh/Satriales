@@ -27,6 +27,7 @@ export class HomeComponent {
   meatProducts: Meat[] = [];
   mealProducts: Meal[] = [];
   drinkProducts: Drink[] = [];
+  popularProducts: (Meat | Meal | Drink)[] = [];
 
   constructor(
     private dataService: DataService,
@@ -37,6 +38,7 @@ export class HomeComponent {
     this.meatProducts = this.dataService.getMeat();
     this.mealProducts = this.dataService.getMeals();
     this.drinkProducts = this.dataService.getDrinks();
+    this.popularProducts = this.dataService.getPopular();
   }
 
   openProductModal(productId: number): void {
@@ -44,7 +46,7 @@ export class HomeComponent {
     
     if (product) {
       this.dialog.open(ProductModalComponent, {
-        width: '500px',
+        width: '1000px',
         data: product
       });
     }
