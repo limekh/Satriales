@@ -126,50 +126,11 @@ export class DataService {
         }
     ];
 
-    private popular: (Meat | Meal | Drink)[] = [
-            {
-                id: 1001,
-                name: "Pork Steak",
-                category: "Meat",
-                price: 25,
-                imageUrl: "../../../assets/images/pog_steak.webp",
-                isStock: true,
-                nutritionValue: [205, 16, 16, 0],
-                meatSort: "Pork",
-                cutType: "Steak",
-                grade: "Chilled",
-                onBone: false
-            },
-            {
-                id: 2003,
-                name: "Panozzo",
-                category: "Meal",
-                price: 4.1,
-                imageUrl: "../../../assets/images/panozzo.webp",
-                isStock: true,
-                nutritionValue: [205, 16, 16, 0],
-                composition: "Parma ham, arugula, mozzarella, cherry tomatoes",
-                weight: 200,
-                allergens: "glutens"
-            },
-            {
-                id: 3002,
-                name: "Sprite 0.5l",
-                category: "Drink",
-                price: 1.5,
-                imageUrl: "../../../assets/images/sprite.jpg",
-                isStock: true,
-                nutritionValue: [205, 0, 0, 50],
-                composition: "Sugar",
-                type: "Lemonade",
-                volume: 500,
-                isCarbonated: true
-            }
-        ];
+    private popular: number[] = [ 1001, 2003, 3002 ];
 
     constructor() { }
 
-    getPopular(): (Meat | Meal | Drink)[] {
+    getPopular(): number[] {
         return this.popular;
     }
 
@@ -183,10 +144,5 @@ export class DataService {
 
     getDrinks(): Drink[] {
         return this.drinks;
-    }
-
-    getProductById(id: number): Meat | Meal | Drink | undefined {
-        const allProducts = [...this.meats, ...this.meals, ...this.drinks];
-        return allProducts.find(product => product.id == id);
     }
 }

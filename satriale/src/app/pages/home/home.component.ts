@@ -27,7 +27,7 @@ export class HomeComponent {
   meatProducts: Meat[] = [];
   mealProducts: Meal[] = [];
   drinkProducts: Drink[] = [];
-  popularProducts: (Meat | Meal | Drink)[] = [];
+  popularProducts: number[] = [];
 
   constructor(
     private dataService: DataService,
@@ -52,7 +52,7 @@ export class HomeComponent {
     }
   }
 
-  private getProductById(id: number): AnyProduct | undefined {
+  getProductById(id: number): AnyProduct | undefined{
     const allProducts: AnyProduct[] = [
       ...this.meatProducts,
       ...this.mealProducts,

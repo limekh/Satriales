@@ -4,10 +4,10 @@
 <section id="popular">
   <h2>POPULAR PRODUCTS</h2>
   <div class="products-grid">
-    <div *ngFor="let product of popularProducts" (click)="openProductModal(product.id)" class="product-card">
-      <img [src]="product.imageUrl" [alt]="product.name">
-      <h3>{{product.name}}</h3>
-      <p>{{product.price | currency}}</p>
+    <div *ngFor="let productID of popularProducts" (click)="openProductModal(productID)" class="product-card">
+      <img [src]="getProductById(productID)?.imageUrl" [alt]="getProductById(productID)?.name ?? ''">
+      <h3>{{getProductById(productID)?.name ?? 'Unknown Product'}}</h3>
+      <p>{{getProductById(productID)?.price | currency}}</p>
     </div>
   </div>
 </section>
