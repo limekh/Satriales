@@ -3,6 +3,8 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
+
+    padding-right: 60px;
 }
 
 .mat-color {
@@ -11,15 +13,22 @@
 }
 
 .pig-wrapper {
+    font-family: 'MyFont', Arial, sans-serif;
+
     width: 130px;
     position: relative;
     padding: 0;
     border: none;
 }
 
-.pig-wrapper:active {
-    background-color: #966d6efa;
+.pig-wrapper span {
+    font-size: 17px;
 }
+
+.pig-wrapper:active {
+    background-color: #6b4e4efa;
+}
+
 
 .pig-button {
     width: 100px;
@@ -27,12 +36,12 @@
 
 .pig-text {
     position: absolute;
-    top: 44%;
-    left: 46%;
+    top: 45%;
+    left: 47%;
     transform: translate(-50%, -50%);
 
     font-size: small;
-    color: white;
+    color: rgb(61, 21, 21);
     font-weight: bold;
     pointer-events: none;
 }
@@ -40,6 +49,7 @@
 button {
     background: none;
     border: none;
+    border-radius: 20px;
     padding: 0;
     cursor: pointer;
     width: 100px;
@@ -52,6 +62,10 @@ button {
         max-height: 100%;
         object-fit: contain;
     }
+}
+
+button:hover {
+    background-color: #9b6666fa;
 }
 
 button:focus {

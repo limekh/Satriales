@@ -1,9 +1,16 @@
 .product-modal-content {
-  background-color: rgb(248, 226, 226);
+  background-color: hsl(7, 41%, 84%);
   padding: 30px;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
+  color: rgb(71, 13, 13)
+  
+}
+
+.product-modal-content h1 {
+    font-family: 'MyFont', Arial, sans-serif;
+    color: rgb(71, 13, 13)
 }
 
 .about {
@@ -54,14 +61,14 @@
 .price {
   font-size: 2rem;
   font-weight: bold;
-  color: #c62828;
+  color: #9b0202;
   margin: 1rem 0;
 }
 
 .order {
   text-align: center;
   margin-top: 30px;
-  color: #444;
+  color: black;
 }
 
 ul li strong {

@@ -1,21 +1,22 @@
-<a routerLink="/"><img src="../../../assets/images/logotip.png" alt="SATRIALE'S" height="100px" style="margin-left: 20px"></a>
+<a (click)="scrollTo('hero')" routerLink="/"><img src="../../../assets/images/logotip.png" alt="SATRIALE'S" height="100px" style="margin-left: 60px"></a>
 <div class="nav-buttons">
-  <button (click)="scrollTo('meat')">
+  <button (click)="scrollTo('meat')" class="pig-wrapper">
+    <span class="pig-text">MEAT</span>
     <img src="./assets/images/pigbutton.svg" alt="meat">
   </button>
-  <button (click)="scrollTo('meals')">
+  <button (click)="scrollTo('meals')" class="pig-wrapper">
+    <span class="pig-text">MEAL</span>
     <img src="./assets/images/pigbutton.svg" alt="meal">
   </button>
-  <button (click)="scrollTo('drinks')">
+  <button (click)="scrollTo('drinks')" class="pig-wrapper">
+    <span class="pig-text">DRINK</span>
     <img src="./assets/images/pigbutton.svg" alt="drink">
   </button>
 </div>
 
 <div class="nav-buttons">
-  <button>
-    <img src="./assets/images/pigbutton.svg" alt="Свинья">
-  </button>
-  <button>
+  <button class="pig-wrapper" (click)="scrollTo('footer')">
+    <span class="pig-text">ABOUT</span>
     <img src="./assets/images/pigbutton.svg" alt="Свинья">
   </button>
 </div>
