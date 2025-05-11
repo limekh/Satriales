@@ -1,10 +1,18 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+@font-face {
+    font-family: 'MyFont'; 
+    src: 
+      url('./assets/fonts/Roots.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal;  
+    font-display: swap;  
+}
+
 body {
-  background-color: #f0f0f0;
-  margin: 0;
+  background-color: hsl(0, 44%, 85%);
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
 }
 
 app-header {
@@ -36,11 +44,13 @@ app-footer {
   justify-content: space-around;
   padding: 20px;
   margin: 20px;
+
+  font-family: 'MyFont', Arial, sans-serif;
 }
 
 .product-card {
   border-radius: 10px;
-  background-color: rgb(248, 226, 226);
+  background-color: rgb(71, 13, 13);
   text-align: center;
   overflow: hidden;
   width: 400px;
@@ -56,9 +66,24 @@ app-footer {
   }
 }
 
+.product-card h3,
+.product-card p {
+    font-family: 'MyFont', Arial, sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+.product-card h3 {
+  padding-top: 40px;
+}
+
+.product-card p {
+  padding-bottom: 40px;
+}
+
 .product-card img {
   width: 100%;
-  height: auto;
+  height: 400px;
   object-fit: cover;
   display:block;
 }
