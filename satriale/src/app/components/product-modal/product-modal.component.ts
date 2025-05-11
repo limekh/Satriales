@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { AnyProduct } from '../../models/product.model';
 import { Meat, Meal, Drink } from '../../models/product.model';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-product-modal',

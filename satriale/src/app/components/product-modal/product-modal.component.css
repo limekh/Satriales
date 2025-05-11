@@ -1,11 +1,11 @@
 .product-modal-content {
+  position: relative;
   background-color: hsl(7, 41%, 84%);
   padding: 30px;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
   color: rgb(71, 13, 13)
-  
 }
 
 .product-modal-content h1 {
@@ -73,4 +73,21 @@
 
 ul li strong {
   font-weight: 500; 
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: rgb(71, 13, 13);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-button:focus {
+  outline: 2px solid rgb(71, 13, 13); 
+  outline-offset: 2px;
 }
