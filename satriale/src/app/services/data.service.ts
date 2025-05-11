@@ -126,10 +126,7 @@ export class DataService {
         }
     ];
 
-    constructor() { }
-
-    getPopularProducts() {
-        return [
+    private popular: (Meat | Meal | Drink)[] = [
             {
                 id: 1001,
                 name: "Pork Steak",
@@ -169,6 +166,11 @@ export class DataService {
                 isCarbonated: true
             }
         ];
+
+    constructor() { }
+
+    getPopular(): (Meat | Meal | Drink)[] {
+        return this.popular;
     }
 
     getMeat(): Meat[] {
