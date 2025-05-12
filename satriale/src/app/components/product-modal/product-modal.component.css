@@ -90,4 +90,11 @@ ul li strong {
 .close-button:focus {
   outline: 2px solid rgb(71, 13, 13); 
   outline-offset: 2px;
+  border-radius: 10px;
+}
+
+.close-button:hover {
+  color: white;
+  background-color: rgb(71, 13, 13);
+  border-radius: 10px;
 }
