@@ -35,10 +35,18 @@ export class HomeComponent {
   ) { }
 
   ngOnInit(): void {
-    this.meatProducts = this.dataService.getMeat();
-    this.mealProducts = this.dataService.getMeals();
-    this.drinkProducts = this.dataService.getDrinks();
-    this.popularProducts = this.dataService.getPopular();
+    this.dataService.getMeat().subscribe(meats => {
+      this.meatProducts = meats;
+    });
+    this.dataService.getMeals().subscribe(meals => {
+      this.mealProducts = meals;
+    });
+    this.dataService.getDrinks().subscribe(drinks => {
+      this.drinkProducts = drinks;
+    });
+    this.dataService.getPopular().subscribe(popular => {
+      this.popularProducts = popular;
+    });
   }
 
   openProductModal(productId: number): void {
